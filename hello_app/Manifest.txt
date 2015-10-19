@@ -1,0 +1,6 @@
+Name: hello_app
+Specification-Title: test war
+Specification-Version: 1.2
+Specification-Vendor: jkorzekwa
+Implementation-Version: build57
+Implementation-Vendor: jkorzekwa
