@@ -53,6 +53,8 @@
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.2.3, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jdbc-sqlite3 (v3.8.10.1, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.0.3, jruby-9.0.1.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jruby-jars (v1.7.22, jruby-9.0.1.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jruby-rack (v1.1.19, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.3, jruby-9.0.1.0-p0) [gem]" level="application" />
@@ -69,6 +71,7 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.2, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.4.2, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.0, jruby-9.0.1.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.1.7, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.19, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.2, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.0, jruby-9.0.1.0-p0) [gem]" level="application" />
@@ -81,10 +84,12 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v2.3.0, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.5.3, jruby-9.0.1.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warbler (v1.4.9, jruby-9.0.1.0-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v2.0.0.beta3, jruby-9.0.1.0-p0) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
     <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
   </component>
+  <component name="Warbler" number="1" string0="true" />
 </module>
