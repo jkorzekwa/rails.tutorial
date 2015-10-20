@@ -5,4 +5,4 @@ default: &default
 
 development:
   <<: *default
-  database: ~/databases/simple/development.sqlite3
+  database: /etc/simple/db/development.sqlite3
