@@ -12,16 +12,16 @@
 
 case "$1" in
  start)
-   su root -c SIMPLE_APP_HOME/bin/startup.sh
+   su root -c $SIMPLE_APP_HOME/bin/startup.sh
    ;;
  stop)
-   su root -c SIMPLE_APP_HOME/bin/shutdown.sh
+   su root -c $SIMPLE_APP_HOME/bin/shutdown.sh
    sleep 10
    ;;
  restart)
-   su root -c SIMPLE_APP_HOME/bin/shutdown.sh
+   su root -c $SIMPLE_APP_HOME/bin/shutdown.sh
    sleep 20
-   su root -c SIMPLE_APP_HOME/bin/startup.sh
+   su root -c $SIMPLE_APP_HOME/bin/startup.sh
    ;;
  *)
    echo "Usage: simple {start|stop|restart}" >&2
