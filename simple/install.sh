@@ -17,5 +17,6 @@ with open('simple_init', 'r') as input_file, open('new_file', 'w') as output_fil
         else:
             output_file.write(line)
 shutil.move('new_file','simple_init')
+os.chmod('simple_init',0777)
 shutil.copy('simple_init', '/etc/init.d/simple')
 os.system('update-rc.d simple defaults')
