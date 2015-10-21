@@ -27,7 +27,7 @@ mv app_init toy_app-$VERSION/bin
 mkdir -p toy_app-$VERSION/conf/Catalina/localhost
 mv ROOT.xml toy_app-$VERSION/conf/Catalina/localhost
 chmod 777 toy_app-$VERSION/bin/*
-sed -i 's/port="8080"/port="8181"/g' toy_app-$VERSION/conf/server.xml
+sed -i 's/port="8080"/port="8182"/g' toy_app-$VERSION/conf/server.xml
 sed '$iexport CATALINA_OPTS="-Xmx512m"' toy_app-$VERSION/bin/startup.sh
 sed '$iexport JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"' toy_app-$VERSION/bin/startup.sh
 
