@@ -27,6 +27,8 @@ mkdir -p simple_app-$VERSION/conf/Catalina/localhost
 mv ROOT.xml simple_app-$VERSION/conf/Catalina/localhost
 chmod 777 simple_app-$VERSION/bin/*
 sed -i 's/port="8080"/port="8181"/g' simple_app-$VERSION/conf/server.xml
+sed '$iexport CATALINA_OPTS="-Xmx512m"' simple_app-$VERSION/bin/startup.sh
+sed '$iexport JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"' simple_app-$VERSION/bin/startup.sh
 
 # Package app
 tar -zcvf simple_app-$VERSION.tar.gz simple_app-$VERSION
