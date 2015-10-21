@@ -10,7 +10,7 @@
 #
 ### END INIT INFO
 
-export $SIMPLE_APP_HOME=
+export SIMPLE_APP_HOME=
 
 case "$1" in
  start)
