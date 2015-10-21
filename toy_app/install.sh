@@ -20,8 +20,8 @@ with open('app_init', 'r') as input_file, open('new_file', 'w') as output_file:
             output_file.write('export TOY_APP_HOME=%s\n' % (pwd_str))
         else:
             output_file.write(line)
-shutil.move('new_file','toy_init')
-os.chmod('toy_init',0777)
+shutil.move('new_file','app_init')
+os.chmod('app_init',0777)
 shutil.copy('app_init', '/etc/init.d/toy')
 os.system('update-rc.d toy defaults')
 os.system('service toy start')
