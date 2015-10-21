@@ -1,11 +1,11 @@
 #!/usr/bin/python
 import os
 import shutil
+
 # Create db directory
-try:
+if not os.path.exists('/etc/simple/db'):
     os.makedirs("/etc/simple/db",mode=0777)
-except OSError:
-    pass
+
 # Copy init script to /etc/init.d
 os.chdir('..')
 pwd_str = os.getcwd()
