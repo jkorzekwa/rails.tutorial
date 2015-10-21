@@ -2,6 +2,10 @@
 import os
 import shutil
 
+# Exit if not running as sudo
+if os.geteuid() != 0:
+    exit("You need to have root privileges to run this script.\nPlease try again, this time using 'sudo'. Exiting.")
+
 # Create db directory
 if not os.path.exists('/etc/simple/db'):
     os.makedirs("/etc/simple/db",mode=0777)
@@ -20,3 +24,4 @@ shutil.move('new_file','simple_init')
 os.chmod('simple_init',0777)
 shutil.copy('simple_init', '/etc/init.d/simple')
 os.system('update-rc.d simple defaults')
+os.system('service simple start')
