@@ -5,7 +5,6 @@
 sudo apt-get -y install nodejs rpm wget
 
 # Bundle and war app
-jruby -S bundle update
 jruby -S bundle install
 jruby -S warble
 
