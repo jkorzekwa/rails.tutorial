@@ -20,3 +20,4 @@ mkdir -p simple_app-$VERSION/conf/Catalina/localhost
 mv ROOT.xml simple_app-$VERSION/conf/Catalina/localhost
 chmod 777 simple_app-$VERSION/bin/*
 tar -zcvf simple_app-$VERSION.tar.gz simple_app-$VERSION
+sed -i 's/port="8080"/port="8181"/g' simple_app-$VERSION/conf/server.xml
