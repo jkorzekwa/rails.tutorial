@@ -9,8 +9,8 @@ default: &default
 
 development:
   <<: *default
-  database: /etc/simple/db/development.sqlite3
+  database: /etc/toy/db/development.sqlite3
 
 production:
   <<: *default
-  database: /etc/simple/db/production.sqlite3
+  database: /etc/toy/db/production.sqlite3
