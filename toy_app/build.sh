@@ -16,9 +16,9 @@ rm -rf apache-tomcat-*.tar.gz
 mv apache-tomcat-* toy_app-$VERSION
 
 # Move war into tomcat
-mv toy.war toy_app-$VERSION/webapps
+mv toy_app.war toy_app-$VERSION/webapps
 rm -rf toy_app-$VERSION/webapps/ROOT
-ln -s toy.war toy_app-$VERSION/webapps/ROOT.war
+ln -s toy_app.war toy_app-$VERSION/webapps/ROOT.war
 
 # Move required files into tomcat
 mv install.sh toy_app-$VERSION/bin
