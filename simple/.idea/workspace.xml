@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3cecaf55-c6e2-4c5d-a9f2-241f9ca04a17" name="Default" comment="add simple app">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../hello_app/install.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="simple.iws" />
@@ -218,7 +218,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -232,7 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,6 +253,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -851,7 +852,7 @@
       <option name="number" value="Default" />
       <updated>1445291905422</updated>
       <workItem from="1445291906728" duration="11607000" />
-      <workItem from="1445382764690" duration="5636000" />
+      <workItem from="1445382764690" duration="5994000" />
     </task>
     <task id="LOCAL-00001" summary="add simple app">
       <created>1445293113095</created>
@@ -1021,11 +1022,17 @@
       <option name="project" value="LOCAL" />
       <updated>1445402192520</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="remove bundle update">
+      <created>1445402278659</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1445402278659</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17243000" />
+    <option name="totallyTimeSpent" value="17601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="6" />
@@ -1084,7 +1091,8 @@
     <MESSAGE value="add simple app" />
     <MESSAGE value="add prod database" />
     <MESSAGE value="add production secret key" />
-    <option name="LAST_COMMIT_MESSAGE" value="add production secret key" />
+    <MESSAGE value="remove bundle update" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove bundle update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
