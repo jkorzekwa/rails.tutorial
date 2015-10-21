@@ -18,6 +18,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'activerecord-jdbcsqlite3-adapter'
   gem 'rails_12factor', '0.0.2'
 end
