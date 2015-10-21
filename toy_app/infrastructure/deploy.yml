@@ -1,0 +1,46 @@
+# -------------------------------------------------------------
+#    _____                ._____.   .__
+#   /  _  \   ____   _____|__\_ |__ |  |   ____
+#  /  /_\  \ /    \ /  ___/  || __ \|  | _/ __ \
+# /    |    \   |  \\___ \|  || \_\ \  |_\  ___/
+# \____|__  /___|  /____  >__||___  /____/\___  >
+#         \/     \/     \/        \/          \/
+#
+#                              Automating the Path to Divinity
+#
+# PlayBook Description:
+#  This playbook configures the base OS (Ubuntu)
+#  It sets the root password, creates a remote user
+#  Installs Java and mounts a software tools folder
+# -------------------------------------------------------------
+---
+- hosts: all
+  vars:
+    - artifact_url: "{{ lookup('env','ARTIFACT_URL') }}"
+    - artifactrepo: "{{ lookup('env','ARTIFACT_REPO') }}"
+    - artifact: "{{ lookup('env', 'ARTIFACT') }}"
+    - workspace: "{{ lookup('env','WORKSPACE') }}"
+    - version: "{{ lookup('env','VERSION')}}"
+
+  tasks:
+
+  - name: Get name of app
+    set_fact: app="{{artifact.split(".")[0]}}"
+
+  - name: Remove previous install dir
+    file: path=/tmp/{{artifactrepo}} state=absent force=yes
+    run_once: true
+
+  - name: download artifactory package to workspace
+    local_action: command wget {{artifact_url}}/{{artifactrepo}}/{{artifact}} -P {{workspace}}/ creates={{workspace}}/{{artifact}}
+    run_once: true
+
+  - name: Create scratch dir on server
+    file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
+
+  - name: Extract package
+    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
+               creates=/tmp/{{artifactrepo}}/{{version}}/build.log owner=root
+
+  - name: Install app
+    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh

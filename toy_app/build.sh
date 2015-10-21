@@ -24,6 +24,7 @@ ln -s toy.war toy_app-$VERSION/webapps/ROOT.war
 mv install.sh toy_app-$VERSION/bin
 mv uninstall.sh toy_app-$VERSION/bin
 mv app_init toy_app-$VERSION/bin
+mv infrastructure toy_app-$VERSION/
 mkdir -p toy_app-$VERSION/conf/Catalina/localhost
 mv ROOT.xml toy_app-$VERSION/conf/Catalina/localhost
 chmod 777 toy_app-$VERSION/bin/*
