@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Run in root app directory
 sudo apt-get -y install nodejs rpm wget
 jruby -S bundle update
 jruby -S bundle install
