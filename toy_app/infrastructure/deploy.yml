@@ -37,9 +37,9 @@
   - name: download artifactory package to workspace
     get_url: url={{artifact_url}}/{{artifactrepo}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}
 
-#  - name: Extract package
-#    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
-#               creates=/tmp/{{artifactrepo}}/{{version}} owner=root
-#
+  - name: Extract package
+    unarchive: src=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
+               creates=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} owner=root copy=no
+
 #  - name: Install app
 #    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
