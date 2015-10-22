@@ -29,11 +29,9 @@
 
   - name: Remove previous install dir
     file: path=/tmp/{{artifactrepo}} state=absent force=yes
-    run_once: true
 
   - name: download artifactory package to workspace
     local_action: command wget {{artifact_url}}/{{artifactrepo}}/{{artifact}} -P {{workspace}}/ creates={{workspace}}/{{artifact}}
-    run_once: true
 
   - name: Create scratch dir on server
     file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
