@@ -25,26 +25,21 @@
 
   tasks:
 
-  - name: testing
-    shell: echo {{artifactrepo}}
-
   - name: Get name of app
     set_fact: app="{{artifact.split(".")[0]}}"
 
   - name: Remove previous install dir
     file: path=/tmp/{{artifactrepo}} state=absent force=yes
 
-  - name: download artifactory package to workspace
-    local_action: command wget {{artifact_url}}/{{artifactrepo}}/{{artifact}} -P {{workspace}}/
-
   - name: Create scratch dir on server
     file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
 
-  - name: Extract package
-    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
-               creates=/tmp/{{artifactrepo}}/{{version}} owner=root
-  - name: testing
-    shell: echo {{artifactrepo}}
+  - name: download artifactory package to workspace
+    get_url: url={{artifact_url}}/{{artifactrepo}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}
 
-  - name: Install app
-    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
+#  - name: Extract package
+#    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
+#               creates=/tmp/{{artifactrepo}}/{{version}} owner=root
+#
+#  - name: Install app
+#    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
