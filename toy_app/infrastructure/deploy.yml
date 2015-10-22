@@ -40,6 +40,8 @@
   - name: Extract package
     unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
                creates=/tmp/{{artifactrepo}}/{{version}} owner=root
+  - name: testing
+    shell: echo {{artifactrepo}}
 
   - name: Install app
-    command: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
+    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
