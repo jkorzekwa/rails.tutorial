@@ -41,4 +41,4 @@
                creates=/tmp/{{artifactrepo}}/{{version}} owner=root
 
   - name: Install app
-    command: "/tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh"
+    command: ./install.sh chdir=/tmp/{{artifactrepo}}/{{version}}/{{app}}/bin
