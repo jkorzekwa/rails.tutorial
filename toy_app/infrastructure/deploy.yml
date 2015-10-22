@@ -39,7 +39,7 @@
 
   - name: Extract package
     unarchive: src=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
-               creates=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} owner=root copy=no
+               creates=/tmp/{{artifactrepo}}/{{version}}/{{app}}-{{version}} owner=root copy=no
 
 #  - name: Install app
 #    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
