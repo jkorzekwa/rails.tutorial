@@ -21,7 +21,7 @@
     - artifact: "{{ lookup('env', 'ARTIFACT') }}"
     - workspace: "{{ lookup('env','WORKSPACE') }}"
     - version: "{{ lookup('env','VERSION') }}"
-    - app: "{{ lookup('env','APP') }}
+    - app: "{{ lookup('env','APP') }}"
 
   tasks:
 
