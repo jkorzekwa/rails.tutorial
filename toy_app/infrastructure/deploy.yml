@@ -25,6 +25,9 @@
 
   tasks:
 
+  - name: testing
+    shell: echo {{artifactrepo}}
+
   - name: Get name of app
     set_fact: app="{{artifact.split(".")[0]}}"
 
