@@ -20,7 +20,8 @@
     - artifactrepo: "{{ lookup('env','ARTIFACT_REPO') }}"
     - artifact: "{{ lookup('env', 'ARTIFACT') }}"
     - workspace: "{{ lookup('env','WORKSPACE') }}"
-    - version: "{{ lookup('env','VERSION')}}"
+    - version: "{{ lookup('env','VERSION') }}"
+    - app: "{{ lookup('env','APP') }}
 
   tasks:
 
@@ -37,7 +38,8 @@
     file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
 
   - name: Extract package
-    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/ creates=/tmp/{{artifactrepo}}/{{version}} owner=root
+    unarchive: src={{workspace}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
+               creates=/tmp/{{artifactrepo}}/{{version}} owner=root
 
   - name: Install app
-    shell: ./install.sh chdir=/tmp/{{artifactrepo}}/{{version}}/{{app}}/bin
+    shell: ./install.sh chdir=/tmp/"{{artifactrepo}}"/"{{version}}"/"{{app}}"/bin
