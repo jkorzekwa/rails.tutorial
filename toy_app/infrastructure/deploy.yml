@@ -28,6 +28,9 @@
   - name: Remove previous install dir
     file: path=/tmp/{{artifactrepo}} state=absent force=yes
 
+  - name: Remove previous app dir
+    file: path=/usr/local/{{app}} state=absent force=yes
+
   - name: Create scratch dir on server
     file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
 
