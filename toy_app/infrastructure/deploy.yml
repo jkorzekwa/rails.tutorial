@@ -35,7 +35,7 @@
     file: path=/tmp/{{artifactrepo}} state=absent force=yes
 
   - name: download artifactory package to workspace
-    local_action: command wget {{artifact_url}}/{{artifactrepo}}/{{artifact}} -P {{workspace}}/ creates={{workspace}}/{{artifact}}
+    local_action: command wget {{artifact_url}}/{{artifactrepo}}/{{artifact}} -P {{workspace}}/
 
   - name: Create scratch dir on server
     file: path=/tmp/{{artifactrepo}}/{{version}} state=directory
