@@ -38,8 +38,8 @@
     get_url: url={{artifact_url}}/{{artifactrepo}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}
 
   - name: Extract package
-    unarchive: src=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} dest=/tmp/{{artifactrepo}}/{{version}}/
-               creates=/tmp/{{artifactrepo}}/{{version}}/{{app}}-{{version}} owner=root copy=no
+    unarchive: src=/tmp/{{artifactrepo}}/{{version}}/{{artifact}} dest=/usr/local/
+               creates=/usr/local/{{app}} owner=root copy=no
 
-#  - name: Install app
-#    shell: /tmp/{{artifactrepo}}/{{version}}/{{app}}/bin/install.sh
+  - name: Install app
+    shell: /usr/local/{{app}}/bin/install.sh
