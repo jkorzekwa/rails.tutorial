@@ -7,6 +7,10 @@
 default: &default
   adapter: sqlite3
 
+test:
+  <<: *default
+  database: /etc/toy/db/development.sqlite3
+
 development:
   <<: *default
   database: /etc/toy/db/development.sqlite3
