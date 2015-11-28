@@ -10,7 +10,8 @@ gem 'jbuilder',     '2.2.3'
 gem 'json'
 gem 'therubyrhino'
 gem 'sdoc',         '0.4.0', group: :doc
-gem 'ci_reporter'
+gem 'ci_reporter_minitest'
+gem 'minitest-reporters'
 
 group :development, :test do
   gem 'activerecord-jdbcsqlite3-adapter'
