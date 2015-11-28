@@ -36,6 +36,7 @@ sed '$iexport JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"' $APP/bin/star
 
 # Package app
 tar -zcvf $APP-$VERSION.tar.gz $APP
+tar -zcvf $APP-snapshot.tar.gz $APP
 
 # Create build.properties
 echo VERSION=$VERSION >> $APP/build.properties
