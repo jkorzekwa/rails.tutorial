@@ -12,7 +12,7 @@ jruby -S bundle install
 jruby -S warble
 
 # Download tomcat app
-wget http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.0.28/bin/apache-tomcat-8.0.28.tar.gz
+wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.28/bin/apache-tomcat-8.0.28.tar.gz
 tar -xzf apache-tomcat-*.tar.gz
 rm -rf apache-tomcat-*.tar.gz
 mv apache-tomcat-* $APP
